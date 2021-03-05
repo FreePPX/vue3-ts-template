@@ -1,7 +1,7 @@
 import {createApp} from 'vue';
+import './storage';
 import App from './App.vue';
 import router from './router';
-import './storage';
 
 //element-ui
 import ElementPlus from 'element-plus';
