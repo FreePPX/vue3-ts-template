@@ -1,4 +1,5 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router';
+import {getStorage} from '../storage';
 import Login from '../views/Login.vue';
 import Main from '../views/Main.vue';
 import Home from '../views/Home.vue';

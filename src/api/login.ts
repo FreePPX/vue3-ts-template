@@ -1,4 +1,5 @@
 import axios from '../http';
+import {setStorage} from '../storage';
 
 //停车场客户端短信登录
 interface LoginParams {

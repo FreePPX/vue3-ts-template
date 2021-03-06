@@ -1,9 +1,9 @@
-function setStorage(key: string, value: any) {
+export function setStorage(key: string, value: any): void {
   const jsonVal = JSON.stringify({value: value});
   localStorage.setItem(key, jsonVal);
 };
 
-function getStorage(key: string): any {
+export function getStorage(key: string): any {
   let jsonVal = <string>localStorage.getItem(key);
   switch (jsonVal) {
     case null:
@@ -14,5 +14,3 @@ function getStorage(key: string): any {
   }
 };
 
-window.setStorage = setStorage;
-window.getStorage = getStorage;

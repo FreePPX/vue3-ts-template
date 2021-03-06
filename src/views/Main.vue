@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-  import {defineComponent, reactive, inject, toRefs} from 'vue';
+  import {defineComponent, reactive, toRefs} from 'vue';
   import {useRouter} from 'vue-router';
   import {pad} from '../components/global';
 

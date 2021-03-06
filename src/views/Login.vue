@@ -22,6 +22,7 @@
   import {useRouter} from 'vue-router';
   import {ElMessage} from 'element-plus';
   import {exampleLoginFn} from '../api/login';
+  import {setStorage} from '../storage';
 
   export default defineComponent({
     name: 'Login',
