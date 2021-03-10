@@ -228,3 +228,17 @@ export function getQueryString(name: string): any {
   }
   return null;
 }
+
+//金额格式化
+export function moneyFormat(
+  val: any, c: number = 2, d: string = '.', t: string = ','): string {
+  if (!val) val = 0;
+  let n = val,
+    s = n < 0 ? '-' : '',
+    i: any = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
+    j: number = i.length;
+  j = j > 3 ? j % 3 : 0;
+  return s + (j ? i.substr(0, j) + t : '') +
+    i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + t) +
+    (c ? d + Math.abs(n - i).toFixed(c).slice(2) : '');
+}
